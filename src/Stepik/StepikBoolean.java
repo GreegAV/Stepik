@@ -1,3 +1,5 @@
+package Stepik;
+
 /**
  Реализуйте метод, возвращающий true, если среди четырех его аргументов ровно два истинны (любые).
  Во всех остальных случаях метод должен возвращать false.
@@ -28,7 +30,7 @@
  Sample Output 3:
  true
  */
-public class Stepik {
+public class StepikBoolean {
     public static void main(String[] args) {
 int i=1;
         System.out.println(booleanExpression(false, false,false,false));
