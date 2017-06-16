@@ -31,60 +31,46 @@
 public class Stepik {
     public static void main(String[] args) {
 int i=1;
-        System.out.print(i++);System.out.println(booleanExpression(false, false,false,false)?"!":"");
-        System.out.print(i++);System.out.println(booleanExpression(false, false,false,true)?"!":"");
-        System.out.print(i++);System.out.println(booleanExpression(false, false,true,false)?"!":"");
+        System.out.println(booleanExpression(false, false,false,false));
+        System.out.println(booleanExpression(false, false,false,true));
+        System.out.println(booleanExpression(false, false,true,false));
 
-        System.out.print(i++);System.out.println(booleanExpression(false, false,true,true)?"!":"");
+        System.out.println(booleanExpression(false, false,true,true));
+        System.out.println("!");
 
-        System.out.print(i++);System.out.println(booleanExpression(false, true,false,false)?"!":"");
-        System.out.print(i++);System.out.println(booleanExpression(false, true,false,true)?"!":"");
+        System.out.println(booleanExpression(false, true,false,false));
 
-        System.out.print(i++);System.out.println(booleanExpression(false, true,true,false)?"!":"");
+        System.out.println(booleanExpression(false, true,false,true));
+        System.out.println("!");
 
-        System.out.print(i++);System.out.println(booleanExpression(false, true,true,true)?"!":"");
+        System.out.println(booleanExpression(false, true,true,false));
 
-        System.out.print(i++);System.out.println( booleanExpression(true, false,false,false)?"!":"");
-        System.out.print(i++);System.out.println( booleanExpression(true, false,false,true)?"!":"");
-        System.out.print(i++);System.out.println( booleanExpression(true, false,true,false)?"!":"");
+        System.out.println(booleanExpression(false, true,true,true));
 
-        System.out.print(i++);System.out.println( booleanExpression(true, false,true,true)?"!":"");
+        System.out.println( booleanExpression(true, false,false,false));
+        System.out.println( booleanExpression(true, false,false,true));
+        System.out.println( booleanExpression(true, false,true,false));
 
-        System.out.print(i++);System.out.println( booleanExpression(true, true,false,false)?"!":"");
+        System.out.println( booleanExpression(true, false,true,true));
 
-        System.out.print(i++);System.out.println( booleanExpression(true, true,false,true)?"!":"");
-        System.out.print(i++);System.out.println( booleanExpression(true, true,true,false)?"!":"");
-        System.out.print(i++);System.out.println( booleanExpression(true, true,true,true)?"!":"");
+        System.out.println( booleanExpression(true, true,false,false));
+
+        System.out.println( booleanExpression(true, true,false,true));
+        System.out.println( booleanExpression(true, true,true,false));
+        System.out.println( booleanExpression(true, true,true,true));
 
     }
     public static boolean booleanExpression(boolean a, boolean b, boolean c, boolean d) {
         if (a) {
-            if (b){
-                if (!c&!d)
-                return a&&b;
-            }
-            if (c) {
-                if (!b&!d)
-                return a&&c;
-            }
-            if (d) {
-                if (!b&!c)
-                return a&&d;
-            }
+            if (b&!c&!d) return true;
+            if (!b&!c&d) return true;
+            if (!b&c&!d) return true;
         }
         else {
-            if (b){
-                if (c&!d) {
-                    return b & c;
-                }
-                return false;
-            }
-            if (c){
-                if (d) return c&d;
-            }
-
+            if (b&c&!d) return true;
+            if (b&!c&d) return true;
+            if (!b&c&d) return true;
         }
-
         return false;
     }
 
