@@ -1,4 +1,4 @@
-package Stepik.Mailer;
+package Stepik.MailerPackage;
 
 import java.util.logging.Logger;
 
