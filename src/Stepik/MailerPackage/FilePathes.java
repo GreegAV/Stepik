@@ -33,6 +33,9 @@ public class FilePathes {
         System.out.println("a\\.\\b\\..\\c\\.\\file.txt");
         System.out.println(file4.getCanonicalPath());
         System.out.println("____________________________________________");
+
+
+
     }
 
 }
