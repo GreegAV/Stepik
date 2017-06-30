@@ -21,7 +21,6 @@ public class StreamWorker {
     }
 
     public static int checkSumOfStream(InputStream inputStream) throws IOException {
-        // your implementation here
         int checkSum = 0, readsResult = -1;
         byte[] readedBytes = new byte[1024];
 
