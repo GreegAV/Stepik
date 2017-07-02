@@ -6,7 +6,7 @@ import java.io.InputStream;
 
 public class StreamWorker {
 
-    public static void main(final String[] args) {Serializable
+    public static void main(final String[] args) {
 
         final byte[] inputArray = {0x33, 0x45, 0x01};
         int checkSum = 0;
